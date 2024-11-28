@@ -27,3 +27,4 @@ replay_pid*
 .idea/.gitignore
 .idea/workspace.xml
 *.iml
+.gradle
