@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author fguaman
  */
-public class ArraySumTest {
+class ArraySumTest {
     /**
      * The array to be summed.
      */
