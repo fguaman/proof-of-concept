@@ -15,7 +15,7 @@ on:
 jobs:
   build-poc-java-concurrency:
     if: "contains(github.event.head_commit.message, '[poc-java-concurrency]')"
-    name: Build and analyze
+    name: Build and Analyze
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,4 +42,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: cd ../poc-java-concurrency && pwd && ./gradlew build sonar --info
+        run: ./gradlew build sonar --info
