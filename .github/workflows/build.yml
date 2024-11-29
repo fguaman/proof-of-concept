@@ -46,6 +46,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           cd poc-java-concurrency
+          ls
           pwd
-          && ls &&
           ./gradlew build sonar --info
