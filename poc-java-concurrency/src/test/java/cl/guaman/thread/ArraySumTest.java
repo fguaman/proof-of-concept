@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
  * @author fguaman
  */
 class ArraySumTest {
+
     /**
      * The array to be summed.
      */
