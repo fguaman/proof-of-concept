@@ -15,7 +15,7 @@ on:
 jobs:
   build-poc-java-concurrency:
     if: "contains(github.event.head_commit.message, '[poc-java-concurrency]')"
-    name: Build and analyze Java Project
+    name: Build and analyze
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,7 +39,8 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build and analyze
+        working-directory: ./poc-java-concurrency
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew build sonar --info -p poc-java-concurrency
+        run: ../gradlew build sonar --info
