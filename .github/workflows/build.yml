@@ -38,7 +38,7 @@ jobs:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
-      - name: Build and analyze
+      - name: Build and Analyze
         working-directory: ./poc-java-concurrency
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
