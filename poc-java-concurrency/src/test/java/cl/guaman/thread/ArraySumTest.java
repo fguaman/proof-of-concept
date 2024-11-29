@@ -3,6 +3,9 @@ package cl.guaman.thread;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * This class contains a unit test for calculating the sum of an integer array
  * using multiple threads.
@@ -10,6 +13,7 @@ import org.junit.jupiter.api.Test;
  * @author fguaman
  */
 class ArraySumTest {
+    private static final Logger logger = Logger.getLogger(ArraySumTest.class.getName());
 
     /**
      * The array to be summed.
@@ -27,7 +31,8 @@ class ArraySumTest {
      * @throws InterruptedException if any thread is interrupted while waiting.
      */
     @Test
-    void execute() throws InterruptedException {
+    void executeTotal() throws InterruptedException {
+        logger.log(Level.INFO, "execute total sum with two thread's");
         Thread threadOne = new Thread(() -> {
             int sum = 0;
             for (int i = 0; i < array.length / 2; i++) {
@@ -58,6 +63,6 @@ class ArraySumTest {
 
         // verify that the total sum is correct
         Assertions.assertEquals(55, totalSum);
-        System.out.println("totalSum = " + totalSum);
+        logger.log(Level.INFO, "the result is totalSum={0}", totalSum);
     }
 }

@@ -43,7 +43,7 @@ jobs:
       - name: Build and Analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.POC_SONAR_TOKEN }}
         run: |
           cd poc-java-concurrency
           ./gradlew build sonar --info
