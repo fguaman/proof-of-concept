@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cl.guaman.ArraySumTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-28T19:29:30" hostname="MacBook-Pro-de-Fabian.local" time="0.06">
+  <properties/>
+  <testcase name="execute()" classname="cl.guaman.ArraySumTest" time="0.06"/>
+  <system-out><![CDATA[total = 55
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
