@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "org.sonarqube" version "6.0.1.5171"
 }
 
 group = 'cl.guaman'
@@ -12,6 +13,14 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "fguaman_proof-of-concept"
+        property "sonar.organization", "fguaman"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 test {
