@@ -13,6 +13,7 @@ public class CounterSync {
      * Default constructor for CounterSync.
      */
     public CounterSync() {
+        // do nothing
     }
 
     /**
