@@ -1,4 +1,4 @@
-package cl.guaman.simple.threads;
+package cl.guaman.threads.case_i;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

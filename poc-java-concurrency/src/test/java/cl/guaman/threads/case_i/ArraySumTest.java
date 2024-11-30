@@ -1,5 +1,5 @@
 
-package cl.guaman.simple.threads;
+package cl.guaman.threads.case_i;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
