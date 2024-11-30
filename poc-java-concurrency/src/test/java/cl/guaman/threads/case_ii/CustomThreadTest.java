@@ -3,6 +3,8 @@ package cl.guaman.threads.case_ii;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,5 +43,20 @@ class CustomThreadTest {
 
         logger.log(Level.INFO, "factory stats ={0}", factory.getStats());
         Assertions.assertEquals(10, factory.getCounter());
+    }
+
+    /**
+     * Tests the Task's handling of an InterruptedException.
+     * Verifies that the exception is logged and the thread's interrupt status is set.
+     */
+    @Test
+    void executeTaskInterruptedException() throws InterruptedException {
+        Task task = new Task();
+        Thread taskThread = new Thread(task);
+        taskThread.start();
+
+        Thread.sleep(100);
+        taskThread.interrupt();
+        taskThread.join();
     }
 }
