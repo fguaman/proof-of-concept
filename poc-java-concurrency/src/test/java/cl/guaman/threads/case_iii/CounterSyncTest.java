@@ -50,6 +50,6 @@ class CounterSyncTest {
         executorService.shutdown();
 
         Assertions.assertEquals(numberOfThreads * incrementsPerThread, counterSync.getCounter());
-        logger.log(Level.INFO, "counter={0}", numberOfThreads * incrementsPerThread);
+        logger.log(Level.INFO, "counter = {0}", numberOfThreads * incrementsPerThread);
     }
 }

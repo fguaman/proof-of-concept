@@ -39,7 +39,7 @@ class CustomThreadTest {
             thread.start();
         }
 
-        logger.log(Level.INFO, "factory stats ={0}", factory.getStats());
+        logger.log(Level.INFO, "factory stats = {0}", factory.getStats());
         Assertions.assertEquals(10, factory.getCounter());
     }
 

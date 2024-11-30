@@ -28,6 +28,6 @@ class ArraySumTest {
         int totalSum = arraySum.calculateTotalSum(array);
 
         Assertions.assertEquals(55, totalSum);
-        logger.log(Level.INFO, "the result is totalSum={0}", totalSum);
+        logger.log(Level.INFO, "the result is totalSum = {0}", totalSum);
     }
 }
